@@ -15,6 +15,3 @@ autoreconf --force --install
 make
 sudo make install
 
-echo ""
-echo "Installation Complete!"
-echo ":)"
