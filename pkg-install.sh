@@ -1,9 +1,12 @@
+#!/bin/bash
+#---------------------------------
 # Installs pre-requisite packages
-
+#---------------------------------
 # centos equivalent of debian's build-essential *brute-force*
 sudo yum -y groupinstall 'Development Tools'
 sudo yum -y install qt qt-devel automake libtool gperf flex bison
 sudo yum -y install libxml2 libxml2-devel zlib zlib-devel
+sudo yum -y install libX11 libX11-devel
 
 # Enable EPEL repo
 sudo yum -y install --enablerepo=extras epel-release
@@ -12,7 +15,7 @@ sudo yum -y install "perl(XML::LibXML)"
 
 sudo yum -y install gd gd-devel libXpm-devel perl-GD
 
-if [ $1 = "--install-docs"]; then
+if [ "$1" = "--install-docs" ]; then
     # Packages required for documentation install
     sudo yum -y install perl-Tk perl-Digest-MD5
     

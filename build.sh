@@ -1,12 +1,20 @@
+#!/bin/bash
+#-------------------------------------
 # Builds and install from source code
-cd ~/git/qucs/qucs
-./bootstrap
+#-------------------------------------
+cd /home/$(whoami)/git/qucs
 
-if [$1 = "--install-docs"]; then
-    ./configure
-else
-    ./configure --disable-doc
+doc_arg=""
+
+if [ "$1" != "--install-docs" ]; then
+    doc_arg="--disable-doc"
 fi
-
+./bootstrap
+autoreconf --force --install
+./configure --enable-maintainer-mode $doc_arg
 make
 sudo make install
+
+echo ""
+echo "Installation Complete!"
+echo ":)"

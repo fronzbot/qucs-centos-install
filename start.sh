@@ -1,9 +1,12 @@
-# /bin/bash
+#!/bin/bash
+#--------------------------------
+# Wrapper script to install QUCS
+#--------------------------------
 
-if [-z $1]; then
-    $arg = "none"
-else
-   $arg = $1
+arg=""
+
+if [ "$1" = "--install-docs" ]; then
+    arg="$1"
 fi 
 
 # Wrapper script to install QUCS
