@@ -15,6 +15,9 @@ sudo yum -y install "perl(XML::LibXML)"
 
 sudo yum -y install gd gd-devel libXpm-devel perl-GD
 
+# Needed for ngspice
+sudo yum -y install libXaw libXaw-devel libXmu libXmu-devel libXext libXext-devel readline readline-devel fftw fftw-devel
+
 if [ "$1" = "--install-docs" ]; then
     # Packages required for documentation install
     sudo yum -y install perl-Tk perl-Digest-MD5
