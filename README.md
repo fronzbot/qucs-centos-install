@@ -1,6 +1,6 @@
 # QUCS on CentOS
 
-This repo is just a script to help install [qucs](https://github.com/Qucs/qucs) on CentOS.
+This repo is just a script to help install [qucs](https://github.com/Qucs/qucs) and [qucs-s](https://ra3xdh.github.io) on CentOS.
 
 ## Usage
 
